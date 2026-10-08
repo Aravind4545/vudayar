@@ -575,7 +575,8 @@ ul, ol {
   background: var(--bg-card);
   box-shadow: var(--shadow-elevated), var(--glow-gold);
   width: 100%;
-  max-width: 360px;
+  max-width: 340px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
@@ -583,10 +584,7 @@ ul, ol {
 .hero-media-card img {
   width: 100%;
   height: auto;
-  max-height: 360px;
-  object-fit: contain;
   display: block;
-  background: #0f0e0c;
   transition: transform var(--transition-slow);
 }
 
@@ -657,16 +655,13 @@ ul, ol {
   overflow: hidden;
   border: 1px solid var(--border-gold-subtle);
   box-shadow: var(--shadow-elevated);
-  max-width: 400px;
+  max-width: 380px;
   width: 100%;
-  background: #0f0e0c;
 }
 
 .about-main-img img {
   width: 100%;
   height: auto;
-  max-height: 360px;
-  object-fit: contain;
   display: block;
 }
 
@@ -1471,7 +1466,7 @@ textarea.form-control {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 32px;
+    gap: 28px;
   }
 
   .hero-text-block {
@@ -1487,14 +1482,15 @@ textarea.form-control {
   }
 
   .hero-media-card {
+    width: 100%;
     max-width: 320px;
+    margin: 0 auto;
   }
 
   .hero-media-card img {
     width: 100%;
     height: auto;
-    max-height: 280px;
-    object-fit: contain;
+    display: block;
   }
 
   .hero-stats-wrapper {
@@ -1511,15 +1507,32 @@ textarea.form-control {
     gap: 36px;
   }
 
+  .about-image-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
   .about-main-img {
-    max-width: 340px;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
   }
 
   .about-main-img img {
     width: 100%;
     height: auto;
-    max-height: 280px;
-    object-fit: contain;
+    display: block;
+  }
+
+  .about-quote-card {
+    position: static;
+    width: 100%;
+    max-width: 350px;
+    margin: 16px auto 0 auto;
   }
 
   .process-grid {
@@ -1546,30 +1559,24 @@ textarea.form-control {
   }
 
   .section {
-    padding-top: 65px;
-    padding-bottom: 65px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 
   .hero-media-card {
-    max-width: 290px;
+    max-width: 295px;
   }
 
-  .hero-media-card img {
-    width: 100%;
-    height: auto;
-    max-height: 250px;
-    object-fit: contain;
+  .about-image-stack {
+    max-width: 330px;
   }
 
   .about-main-img {
-    max-width: 280px;
+    max-width: 320px;
   }
 
-  .about-main-img img {
-    width: 100%;
-    height: auto;
-    max-height: 240px;
-    object-fit: contain;
+  .about-quote-card {
+    max-width: 320px;
   }
 
   .gallery-grid {
@@ -1577,7 +1584,7 @@ textarea.form-control {
   }
 
   .sculpture-media {
-    height: 230px;
+    height: 220px;
     padding: 10px;
   }
 
@@ -1591,18 +1598,12 @@ textarea.form-control {
   }
 
   .award-photo-frame {
-    height: 120px;
+    height: 115px;
   }
 
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 36px;
-  }
-
-  .about-quote-card {
-    position: static;
-    margin-top: 14px;
-    max-width: 100%;
   }
 
   .about-pillars {
@@ -1620,26 +1621,19 @@ textarea.form-control {
 
 @media (max-width: 580px) {
   :root {
-    --header-height: 72px;
+    --header-height: 70px;
   }
 
   .brand-logo img {
-    height: 42px;
+    height: 40px;
   }
 
   .hero-title {
-    font-size: 2.05rem;
+    font-size: 1.95rem;
   }
 
   .hero-media-card {
-    max-width: 270px;
-  }
-
-  .hero-media-card img {
-    width: 100%;
-    height: auto;
-    max-height: 230px;
-    object-fit: contain;
+    max-width: 275px;
   }
 
   .hero-badge-floating {
@@ -1648,13 +1642,13 @@ textarea.form-control {
   }
 
   .badge-icon {
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
   }
 
   .badge-icon svg {
-    width: 15px;
-    height: 15px;
+    width: 14px;
+    height: 14px;
   }
 
   .badge-text-title {
@@ -1665,24 +1659,25 @@ textarea.form-control {
     font-size: 0.675rem;
   }
 
-  .about-main-img {
-    max-width: 260px;
+  .about-image-stack {
+    max-width: 295px;
   }
 
-  .about-main-img img {
-    width: 100%;
-    height: auto;
-    max-height: 220px;
-    object-fit: contain;
+  .about-main-img {
+    max-width: 285px;
+  }
+
+  .about-quote-card {
+    max-width: 285px;
   }
 
   .sculpture-media {
-    height: 210px;
+    height: 200px;
     padding: 8px;
   }
 
   .award-photo-frame {
-    height: 110px;
+    height: 105px;
   }
 
   .hero-stats {
@@ -1695,15 +1690,15 @@ textarea.form-control {
   }
 
   .quote-banner {
-    padding: 30px 18px;
+    padding: 28px 16px;
   }
 
   .contact-form-column {
-    padding: 22px 16px;
+    padding: 20px 16px;
   }
 
   .footer-top {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 28px;
   }
 }
