@@ -575,43 +575,39 @@ ul, ol {
   background: var(--bg-card);
   box-shadow: var(--shadow-elevated), var(--glow-gold);
   width: 100%;
-  max-width: 380px;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
 }
 
 .hero-media-card img {
   width: 100%;
-  height: 380px;
-  object-fit: cover;
-  object-position: top center;
+  height: auto;
+  max-height: 360px;
+  object-fit: contain;
+  display: block;
+  background: #0f0e0c;
   transition: transform var(--transition-slow);
 }
 
 .hero-media-card:hover img {
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 
 .hero-media-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, transparent 55%, rgba(13, 12, 10, 0.92) 100%);
-  pointer-events: none;
+  display: none;
 }
 
 .hero-badge-floating {
-  position: absolute;
-  bottom: 14px;
-  left: 14px;
-  right: 14px;
-  background: var(--bg-glass-elevated);
-  backdrop-filter: blur(14px);
-  border: 1px solid var(--border-gold-medium);
-  border-radius: var(--radius-md);
-  padding: 9px 13px;
+  position: relative;
+  background: var(--bg-card);
+  border-top: 1px solid var(--border-gold-subtle);
+  padding: 10px 14px;
   display: flex;
   align-items: center;
   gap: 12px;
   z-index: 2;
-  box-shadow: var(--shadow-card);
+  width: 100%;
 }
 
 .badge-icon {
@@ -663,13 +659,15 @@ ul, ol {
   box-shadow: var(--shadow-elevated);
   max-width: 400px;
   width: 100%;
+  background: #0f0e0c;
 }
 
 .about-main-img img {
   width: 100%;
-  height: 380px;
-  object-fit: cover;
-  object-position: center;
+  height: auto;
+  max-height: 360px;
+  object-fit: contain;
+  display: block;
 }
 
 .about-quote-card {
@@ -820,20 +818,25 @@ ul, ol {
 
 .sculpture-media {
   position: relative;
-  height: 240px;
-  overflow: hidden;
-  background: #100f0d;
+  height: 250px;
+  background: radial-gradient(circle at center, #1b1916 0%, #0d0c0a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
 }
 
 .sculpture-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform var(--transition-slow);
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: transform var(--transition-smooth);
 }
 
 .sculpture-card:hover .sculpture-media img {
-  transform: scale(1.06);
+  transform: scale(1.04);
 }
 
 .sculpture-zoom-badge {
@@ -1064,21 +1067,27 @@ ul, ol {
   position: relative;
   border-radius: var(--radius-sm);
   overflow: hidden;
-  border: 1px solid var(--border-subtle);
-  height: 125px;
+  border: 1px solid var(--border-gold-subtle);
+  height: 135px;
   cursor: pointer;
-  background: #111;
+  background: #0f0e0c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
 }
 
 .award-photo-frame img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
   transition: transform var(--transition-smooth);
 }
 
 .award-photo-frame:hover img {
-  transform: scale(1.08);
+  transform: scale(1.05);
 }
 
 .award-photo-caption {
@@ -1482,7 +1491,10 @@ textarea.form-control {
   }
 
   .hero-media-card img {
-    height: 280px;
+    width: 100%;
+    height: auto;
+    max-height: 280px;
+    object-fit: contain;
   }
 
   .hero-stats-wrapper {
@@ -1504,7 +1516,10 @@ textarea.form-control {
   }
 
   .about-main-img img {
-    height: 280px;
+    width: 100%;
+    height: auto;
+    max-height: 280px;
+    object-fit: contain;
   }
 
   .process-grid {
@@ -1540,7 +1555,10 @@ textarea.form-control {
   }
 
   .hero-media-card img {
-    height: 240px;
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: contain;
   }
 
   .about-main-img {
@@ -1548,7 +1566,10 @@ textarea.form-control {
   }
 
   .about-main-img img {
-    height: 230px;
+    width: 100%;
+    height: auto;
+    max-height: 240px;
+    object-fit: contain;
   }
 
   .gallery-grid {
@@ -1556,7 +1577,8 @@ textarea.form-control {
   }
 
   .sculpture-media {
-    height: 210px;
+    height: 230px;
+    padding: 10px;
   }
 
   .awards-highlight-grid {
@@ -1569,7 +1591,7 @@ textarea.form-control {
   }
 
   .award-photo-frame {
-    height: 105px;
+    height: 120px;
   }
 
   .contact-grid {
@@ -1610,24 +1632,24 @@ textarea.form-control {
   }
 
   .hero-media-card {
-    max-width: 260px;
+    max-width: 270px;
   }
 
   .hero-media-card img {
-    height: 220px;
+    width: 100%;
+    height: auto;
+    max-height: 230px;
+    object-fit: contain;
   }
 
   .hero-badge-floating {
-    padding: 7px 10px;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
-    gap: 8px;
+    padding: 8px 12px;
+    gap: 10px;
   }
 
   .badge-icon {
-    width: 26px;
-    height: 26px;
+    width: 28px;
+    height: 28px;
   }
 
   .badge-icon svg {
@@ -1636,27 +1658,31 @@ textarea.form-control {
   }
 
   .badge-text-title {
-    font-size: 0.75rem;
+    font-size: 0.775rem;
   }
 
   .badge-text-sub {
-    font-size: 0.65rem;
+    font-size: 0.675rem;
   }
 
   .about-main-img {
-    max-width: 240px;
+    max-width: 260px;
   }
 
   .about-main-img img {
-    height: 200px;
+    width: 100%;
+    height: auto;
+    max-height: 220px;
+    object-fit: contain;
   }
 
   .sculpture-media {
-    height: 190px;
+    height: 210px;
+    padding: 8px;
   }
 
   .award-photo-frame {
-    height: 90px;
+    height: 110px;
   }
 
   .hero-stats {
